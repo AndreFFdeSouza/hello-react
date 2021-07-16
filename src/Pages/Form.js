@@ -6,7 +6,7 @@ import axios from 'axios';
 
 function Form(){
     const [campos, setCampos]= useState({
-        txtTítulo:' ',
+        txtTitle:' ',
         txtOption: ' ',
         //cmbUF: '0'
     });
@@ -19,7 +19,8 @@ function Form(){
         event.preventDefault();
         axios.post('http://localhost:3031/cadastro', campos)//post faz requisição ao backend
         .then(response =>{
-            alert('Pergunta: ' + campos.txtTítulo +' Resposta: ' + campos.txtOption);
+            alert('Pergunta: ' + campos.txtTitle +' Resposta: ' + campos.txtOption);
+            console.log('Pergunta: ' + campos.txtTitle +' Resposta: ' + campos.txtOption);
         });//then processa a resposta
     }
 
@@ -29,19 +30,19 @@ function Form(){
             <form onSubmit={handleFormSubmit}>
                 <fieldset>
                     <legend>
-                        <h2>Cadastro de Perguntas</h2>
+                        <h2>Question Register</h2>
                     </legend>
                     <div>
-                        <label> Título :
-                            <input type="text" name="txtTítulo" id="txtTítulo" onChange={handleInputChange} />
+                        <label> Title :
+                            <input type="text" name="txtTitle" id="txtTitle" onChange={handleInputChange} />
                         </label>
                     </div>
                     <div>
-                        <label> Opções :
+                        <label> Option :
                             <input type="text" name="txtOption" id="txtOption" onChange={handleInputChange} />
                         </label>
                     </div>
-                    <input type="submit" value="Salvar" />
+                    <input type="submit" value="Submit" />
                 </fieldset>
             </form>
         </div>
