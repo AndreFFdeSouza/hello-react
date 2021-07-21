@@ -12,13 +12,14 @@ function Home(){
     return (
         <div className='App'>
 
-            <Header title="Header Param"/>
+            <Header title="My First Project in React"/>
             <img src={logo} className="App-logo" alt="logo" />
             <p>
-                <input tipe="button" value="Clique" onClick={Increment} />
+                <button type="button" class="btn btn-outline-primary" onClick={Increment}>Click!</button>
+
             </p>
-            <p>Número de cliques: {contador}</p> 
-            <Link to="/cadastro">Acessar cadastro</Link>
+            <p>Click Number: {contador}</p> 
+            <Link to="/cadastro">Go to from question register</Link>
         </div>
     );
 }

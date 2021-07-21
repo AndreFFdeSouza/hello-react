@@ -17,8 +17,8 @@ app.post('/cadastro', (req, res) => {//recebe a riquisiçao do frontend
     console.log("Cadastro recebido!");
     //salva no banco de dados
     cadastros.push({
-        titulo: req.body.txtTitle, 
-        option: req.body.txtOption, 
+        Question: req.body.txtQuestion, 
+        Response: req.body.txtRes, 
         //uf: req.body.cmbUF foi comentado no Form
     });
     res.json({message: "Tudo ok por aqui!", dados: cadastros, primeiro: cadastros[0]});//envia resposta de volta para frontend

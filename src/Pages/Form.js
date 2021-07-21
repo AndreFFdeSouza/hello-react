@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 import Header from '../Header';
 import axios from 'axios';
-// eslint-disable-next-line no-unused-vars
-//import { response } from 'express';
 
 function Form(){
     const [campos, setCampos]= useState({
-        txtTitle:' ',
-        txtOption: ' ',
+        txtQuestion:' ',
+        txtRes: ' ',
         //cmbUF: '0'
     });
     function handleInputChange(event){
@@ -19,8 +17,8 @@ function Form(){
         event.preventDefault();
         axios.post('http://localhost:3031/cadastro', campos)//post faz requisição ao backend
         .then(response =>{
-            alert('Pergunta: ' + campos.txtTitle +' Resposta: ' + campos.txtOption);
-            console.log('Pergunta: ' + campos.txtTitle +' Resposta: ' + campos.txtOption);
+            alert('Pergunta: ' + campos.txtQuestion +' Resposta: ' + campos.txtRes);
+            console.log('Pergunta: ' + campos.txtQuestion +' Resposta: ' + campos.txtRes);
         });//then processa a resposta
     }
 
@@ -32,17 +30,15 @@ function Form(){
                     <legend>
                         <h2>Question Register</h2>
                     </legend>
-                    <div>
-                        <label> Title :
-                            <input type="text" name="txtTitle" id="txtTitle" onChange={handleInputChange} />
-                        </label>
+                    <div class="input-group">
+                        <span class="input-group-text">Question: </span>
+                        <textarea class="form-control" aria-label="With textarea" name="txtQuestion" id="txtQuestion" onChange={handleInputChange}></textarea>
                     </div>
-                    <div>
-                        <label> Option :
-                            <input type="text" name="txtOption" id="txtOption" onChange={handleInputChange} />
-                        </label>
+                    <div class="input-group">
+                        <span class="input-group-text">Response:</span>
+                        <textarea class="form-control" aria-label="With textarea" name="txtRes" id="txtRes" onChange={handleInputChange}></textarea>
                     </div>
-                    <input type="submit" value="Submit" />
+                    <button type="submit" class="btn btn-outline-primary" value="Submit">Submit</button>
                 </fieldset>
             </form>
         </div>
