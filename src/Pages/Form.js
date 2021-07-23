@@ -17,13 +17,13 @@ function Form(){
         event.preventDefault();
         axios.post('http://localhost:3031/cadastro', campos)//post faz requisição ao backend
         .then(response =>{
-            alert('Pergunta: ' + campos.txtQuestion +' Resposta: ' + campos.txtRes);
-            console.log('Pergunta: ' + campos.txtQuestion +' Resposta: ' + campos.txtRes);
+            alert('Question: ' + campos.txtQuestion +' Response: ' + campos.txtRes);
+            console.log('Question: ' + campos.txtQuestion +' Response: ' + campos.txtRes);
         });//then processa a resposta
     }
 
     return (
-        <div>
+        <div class="App-Form">
             <Header title="React Form" />
             <form onSubmit={handleFormSubmit}>
                 <fieldset>
@@ -38,7 +38,7 @@ function Form(){
                         <span class="input-group-text">Response:</span>
                         <textarea class="form-control" aria-label="With textarea" name="txtRes" id="txtRes" onChange={handleInputChange}></textarea>
                     </div>
-                    <button type="submit" class="btn btn-outline-primary" value="Submit">Submit</button>
+                    <button type="submit" class="btn btn-outline-secondary" value="Submit">Submit</button>
                 </fieldset>
             </form>
         </div>

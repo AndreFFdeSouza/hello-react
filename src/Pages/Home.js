@@ -10,12 +10,12 @@ function Home(){
     }
 
     return (
-        <div className='App'>
+        <div className='App-home'>
 
             <Header title="My First Project in React"/>
             <img src={logo} className="App-logo" alt="logo" />
             <p>
-                <button type="button" class="btn btn-outline-primary" onClick={Increment}>Click!</button>
+                <button type="button" class="btn btn-outline-secondary" onClick={Increment}>Click!</button>
 
             </p>
             <p>Click Number: {contador}</p> 

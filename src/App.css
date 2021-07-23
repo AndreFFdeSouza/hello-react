@@ -13,8 +13,8 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
+.App-Form , .App-home {
+  background-color: lightgray;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,10 +22,14 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  text-align: center;
 }
-
+.input-group{
+  margin: 5px;
+}
 .App-link {
-  color: #61dafb;
+  color: lightblue;
+  background-color:blue;
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +39,8 @@
   to {
     transform: rotate(360deg);
   }
+}
+.headers{
+  color: black;
+  font-weight: bold;
 }
