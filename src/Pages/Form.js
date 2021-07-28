@@ -23,22 +23,24 @@ function Form(){
     }
 
     return (
-        <div class="App-Form">
+        <div class='container bg-light bg-gradient '>
             <Header title="React Form" />
             <form onSubmit={handleFormSubmit}>
                 <fieldset>
                     <legend>
                         <h2>Question Register</h2>
                     </legend>
-                    <div class="input-group">
+                    <div class="input-group mb-3">
                         <span class="input-group-text">Question: </span>
                         <textarea class="form-control" aria-label="With textarea" name="txtQuestion" id="txtQuestion" onChange={handleInputChange}></textarea>
                     </div>
-                    <div class="input-group">
+                    <div class="input-group mb-3">
                         <span class="input-group-text">Response:</span>
                         <textarea class="form-control" aria-label="With textarea" name="txtRes" id="txtRes" onChange={handleInputChange}></textarea>
                     </div>
-                    <button type="submit" class="btn btn-outline-secondary" value="Submit">Submit</button>
+                    <div>
+                        <button type="submit" class="btn btn-outline-primary" value="Submit">Submit</button>
+                    </div>
                 </fieldset>
             </form>
         </div>

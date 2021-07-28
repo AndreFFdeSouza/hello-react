@@ -10,16 +10,20 @@ function Home(){
     }
 
     return (
-        <div className='App-home'>
-
-            <Header title="My First Project in React"/>
-            <img src={logo} className="App-logo" alt="logo" />
-            <p>
-                <button type="button" class="btn btn-outline-secondary" onClick={Increment}>Click!</button>
-
-            </p>
-            <p>Click Number: {contador}</p> 
-            <Link to="/cadastro">Go to from question register</Link>
+        <div class='container bg-light bg-gradiente text-center'>
+            <Header title="My First Project in React" />
+            <div class='container mb-3'>
+                <img src={logo} className="App-logo " alt="logo" />
+            </div>
+            <div class='container d-flex justify-content-center mb-3'>
+                <button type="button" class='btn btn-outline-primary' onClick={Increment}>
+                    Click!
+                </button>
+                <p class='ms-3'><strong>Click Number: {contador}</strong></p> 
+            </div>
+            <div class='container'>
+               <Link to="/cadastro">Go to from question register</Link>
+            </div>
         </div>
     );
 }
