@@ -23,10 +23,10 @@ function Form(){
     }
 
     return (
-        <div class='container bg-light bg-gradient '>
+        <div class='container d-grid gap-3 bg-light bg-gradient '>
             <Header title="React Form" />
             <form onSubmit={handleFormSubmit}>
-                <fieldset>
+                <fieldset class='container min-vh-100'>
                     <legend>
                         <h2>Question Register</h2>
                     </legend>
@@ -48,7 +48,8 @@ function Form(){
 }
 
 export default Form;
-/* essa parte foi retirada
+/*
+    essa parte foi retirada
                     <div>
                         <label> UF:
                             <select name="cmbUF" id="cmbUF" onChange={handleInputChange} >
@@ -64,5 +65,4 @@ export default Form;
             setEstados(response.data);
         })
     }, []);
-
-                    */
+*/

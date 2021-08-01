@@ -10,15 +10,13 @@ function Home(){
     }
 
     return (
-        <div class='container bg-light bg-gradiente text-center'>
+        <div class='container d-grid gap-3 min-vh-100 min-vw-100 bg-light bg-gradiente text-center'>
             <Header title="My First Project in React" />
             <div class='container mb-3'>
                 <img src={logo} className="App-logo " alt="logo" />
             </div>
             <div class='container d-flex justify-content-center mb-3'>
-                <button type="button" class='btn btn-outline-primary' onClick={Increment}>
-                    Click!
-                </button>
+                <button type="button" class='btn btn-outline-primary position-relative' onClick={Increment}>Click!</button>
                 <p class='ms-3'><strong>Click Number: {contador}</strong></p> 
             </div>
             <div class='container'>
